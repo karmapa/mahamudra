@@ -15,7 +15,7 @@ var toHTML=function(fn,json) {
 var dofile=function(fn) {
 	var buf=tibetDoc.parseFile(fn);
 	var outfn="json"+fn.substr(3);
-	outfn.replace(".dct",".json");
+	outfn=outfn.replace(".dct",".json");
 	console.log("converting",fn)
 	var dir=path.dirname(outfn);
 	mkdirp.sync(dir);
